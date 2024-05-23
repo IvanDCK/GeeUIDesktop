@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_app_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_app_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+<!--        <View-->
+<!--            android:id="@+id/left_view"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"></View>-->
+
+        <LinearLayout
+            android:layout_width="110px"
+            android:layout_height="154px"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="110px"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+            <RelativeLayout
+                android:id="@+id/rl_app_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_app_icon"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/iv_black_screen"
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/uninstall_screen"
+                    android:scaleType="centerCrop" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="40px"
+                android:maxLines="2"
+                android:lineSpacingMultiplier="0.8"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal"
+                android:textSize="22sp" />
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1px"-->
+<!--                android:background="@color/black"></View>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_app_title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:textSize="22sp" />-->
+        </LinearLayout>
+
+<!--        <View-->
+<!--            android:id="@+id/right_view"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"></View>-->
+
+
+    </LinearLayout>
+
+<!--    <View-->
+<!--        android:layout_width="110px"-->
+<!--        android:layout_height="5px"></View>-->
+
+
+</LinearLayout>
+
+

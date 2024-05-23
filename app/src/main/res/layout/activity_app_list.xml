@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.letianpai.robot.desktop.ui.view.RobotMainView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.letianpai.robot.desktop.ui.view.RobotMainView>
+
+<!--    <com.letianpai.robot.desktop.ui.view.AppModeSwitchView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"></com.letianpai.robot.desktop.ui.view.AppModeSwitchView>-->
+
+<!--    <com.letianpai.robot.desktop.ui.view.AppSettingsNoticeView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"></com.letianpai.robot.desktop.ui.view.AppSettingsNoticeView>-->
+
+<!--    <com.letianpai.robot.desktop.ui.view.LetianpaiMainView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"></com.letianpai.robot.desktop.ui.view.LetianpaiMainView>-->
+
+</RelativeLayout>

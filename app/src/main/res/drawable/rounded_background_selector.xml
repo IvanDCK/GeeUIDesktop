@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rounded_background_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    &lt;!&ndash; 非按下状态 &ndash;&gt;-->
+<!--    <item android:state_pressed="false"  android:color="@color/commit_background_color">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <corners android:radius="22.5px" /> &lt;!&ndash; 设置圆角半径，这里是12dp &ndash;&gt;-->
+<!--            <solid android:color="@color/white" /> &lt;!&ndash; 设置非按下状态的背景颜色 &ndash;&gt;-->
+<!--        </shape>-->
+
+<!--    </item>-->
+<!--    &lt;!&ndash; 按下状态 &ndash;&gt;-->
+<!--    <item android:state_pressed="true" android:color="@color/white">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <corners android:radius="22.5px" /> &lt;!&ndash; 设置圆角半径，这里是12dp &ndash;&gt;-->
+<!--            <solid android:color="@color/commit_background_color" /> &lt;!&ndash; 设置按下状态的背景颜色 &ndash;&gt;-->
+<!--        </shape>-->
+<!--    </item>-->
+    <!-- 非按下状态 -->
+    <item android:state_pressed="true"  android:color="@color/commit_background_color">
+        <shape android:shape="rectangle">
+            <corners android:radius="22.5px" /> <!-- 设置圆角半径，这里是12dp -->
+            <solid android:color="@color/white" /> <!-- 设置非按下状态的背景颜色 -->
+        </shape>
+
+    </item>
+    <!-- 按下状态 -->
+    <item android:state_pressed="false" android:color="@color/white">
+        <shape android:shape="rectangle">
+            <corners android:radius="22.5px" /> <!-- 设置圆角半径，这里是12dp -->
+            <solid android:color="@color/commit_background_color" /> <!-- 设置按下状态的背景颜色 -->
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GeeUIDesktop</string>
+<!--    <string name="set_as_current_mode">Set as current mode</string>-->
+    <string name="set_as_current_mode">Open</string>
+    <string name="settings">Settings</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="delete_title">删除？\nDeleted?</string>
+    <string name="uninstalling">Uninstalling</string>
+    <string name="open">Open</string>
+    <string name="default_en">Please open or set it in the Letianpai app</string>
+    <string name="default_zh">请在乐天派App中进行打开或设置</string>
+</resources>

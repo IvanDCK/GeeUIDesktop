@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    
+    <ImageView
+        android:id="@+id/ivUserAppIcon"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_marginTop="64px"
+        >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/user_app_title"
+        android:layout_marginTop="5px"
+        android:layout_width="350px"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_height="65px"></TextView>
+
+
+    <com.letianpai.robot.desktop.ui.view.SettingsButton
+        android:id="@+id/openUserApp"
+        android:layout_width="221px"
+        android:layout_height="65px"
+        android:textSize="32sp"
+        android:text="@string/set_as_current_mode"
+        android:textAllCaps="false"
+        android:background="@drawable/setting_rounded_background_selector"
+        ></com.letianpai.robot.desktop.ui.view.SettingsButton>
+
+    <com.letianpai.robot.desktop.ui.view.SettingsButton
+        android:id="@+id/unInstall"
+        android:layout_width="221px"
+        android:layout_height="65px"
+        android:layout_marginTop="28px"
+        android:textSize="32sp"
+        android:text="@string/uninstall"
+        android:textAllCaps="false"
+        android:background="@drawable/setting_rounded_background_selector"
+        ></com.letianpai.robot.desktop.ui.view.SettingsButton>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></View>
+
+    <com.letianpai.robot.desktop.ui.view.BackButton
+        android:id="@+id/back_user_app_main"
+        android:layout_width="match_parent"
+        android:layout_height="68px"></com.letianpai.robot.desktop.ui.view.BackButton>
+
+</LinearLayout>
+
+

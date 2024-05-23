@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_left_view_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <com.letianpai.robot.desktop.ui.viewpager.AppListVerticalViewPager-->
+<!--            -->
+<!--            android:layout_marginTop="92px"-->
+<!--            android:layout_marginBottom="68px"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"></com.letianpai.robot.desktop.ui.viewpager.AppListVerticalViewPager>-->
+        <com.letianpai.robot.desktop.ui.view.AppListVerticalView
+            android:id="@+id/appListVerticalView"
+            android:layout_marginTop="60px"
+            android:layout_marginBottom="68px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.letianpai.robot.desktop.ui.view.AppListVerticalView>
+
+    </LinearLayout>
+
+    <com.letianpai.robot.desktop.ui.view.KeyImageButton
+        android:id="@+id/ivBack"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="68px"></com.letianpai.robot.desktop.ui.view.KeyImageButton>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AppModeSwitchActivity">
+
+
+    <com.letianpai.robot.desktop.ui.view.UserAppMainView
+        android:id="@+id/userAppMainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.letianpai.robot.desktop.ui.view.UserAppMainView>
+
+    <com.letianpai.robot.desktop.ui.view.DeleteConfirmView
+        android:id="@+id/deleteConfirmView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"></com.letianpai.robot.desktop.ui.view.DeleteConfirmView>
+
+
+</RelativeLayout>
