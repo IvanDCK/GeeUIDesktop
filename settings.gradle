@@ -16,5 +16,5 @@ rootProject.name = "GeeUIDesktop"
 include ':app'
 include ':CommChannel'
 include ':Components'
-project(':CommChannel').projectDir = new File('GeeUIComponents/CommChannel')
-project(':Components').projectDir = new File('GeeUIComponents/Components')
+project(':CommChannel').projectDir = new File('../GeeUIComponets/CommChannel')
+project(':Components').projectDir = new File('../GeeUIComponets/Components')

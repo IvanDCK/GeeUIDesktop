@@ -1,20 +1,22 @@
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
     namespace 'com.letianpai.robot.desktop'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.letianpai.robot.desktop"
         minSdk 26
-        targetSdk 33
+        targetSdk 34
         versionCode 24052002
         versionName "1.0."+ versionCode
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    /*
     signingConfigs {
         config {
             storeFile file('../keystore/letianpai.jks')
@@ -23,31 +25,37 @@ android {
             storePassword 'letianpai0801'
         }
     }
+     */
+
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.config
+            //signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
         }
         release {
-            signingConfig signingConfigs.config
+            //signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
     }
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation project(':Components')
     implementation project(':CommChannel')
+    implementation 'androidx.core:core-ktx:1.13.1'
 }
