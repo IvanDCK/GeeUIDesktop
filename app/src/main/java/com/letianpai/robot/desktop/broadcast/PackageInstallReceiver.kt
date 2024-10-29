@@ -19,8 +19,8 @@ class PackageInstallReceiver : BroadcastReceiver() {
         if (!TextUtils.isEmpty(packageName) && !RobotAppListManager.getInstance(context)
                 .isInThePackageList(packageName)
         ) {
-            RobotSubConfigManager.getInstance(context).addUserPackage(packageName)
-            RobotSubConfigManager.getInstance(context).commit()
+            RobotSubConfigManager.getInstance(context)!!.addUserPackage(packageName)
+            RobotSubConfigManager.getInstance(context)!!.commit()
             Log.e("letianpai_auto_install", "update ~~~~~~~~: $packageName")
             RobotAppListManager.getInstance(context).updateAppMenuList()
             responseAppInstallSuccess(context, packageName)

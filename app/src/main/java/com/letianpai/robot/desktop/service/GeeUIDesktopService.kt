@@ -67,7 +67,7 @@ class GeeUIDesktopService : Service() {
             try {
                 iLetianpaiService!!.setAppCmd(
                     AppStoreCmdConsts.COMMAND_INSTALL_APP_STORE_SUCCESS,
-                    (AppStoreInfos(packageName, appName)).toString()
+                    (AppStoreInfos(packageName!!, appName!!)).toString()
                 )
                 //TODO command and data
             } catch (e: RemoteException) {

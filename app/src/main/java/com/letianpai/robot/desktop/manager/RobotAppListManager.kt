@@ -111,17 +111,17 @@ class RobotAppListManager(private val mContext: Context) {
     val localAppList: ArrayList<AppMenuInfo?>
         get() {
             val appList =
-                RobotSubConfigManager.getInstance(mContext).userPackageList
+                RobotSubConfigManager.getInstance(mContext)!!.userPackageList
             val appMenuList =
                 ArrayList<AppMenuInfo?>()
             if (appList != null && appList.size > 0) {
                 for (i in appList.indices) {
                     if (!getInstance(mContext)
-                            .isInThePackageList(appList[i])
+                            .isInThePackageList(appList[i]!!)
                     ) {
                         val appName =
-                            getAppNameFromPackageName(mContext, appList[i])
-                        val drawable = get3PartAppIconByPackageName(appList[i])
+                            getAppNameFromPackageName(mContext, appList[i]!!)
+                        val drawable = get3PartAppIconByPackageName(appList[i]!!)
 
                         val appMenuInfo = AppMenuInfo()
                         appMenuInfo.name = appName
@@ -560,20 +560,20 @@ class RobotAppListManager(private val mContext: Context) {
     }
 
     fun resetLocalUserPackageList() {
-        RobotSubConfigManager.getInstance(mContext).resetUserPackageList()
-        val localAppList = RobotSubConfigManager.getInstance(mContext).userPackageList
+        RobotSubConfigManager.getInstance(mContext)!!.resetUserPackageList()
+        val localAppList = RobotSubConfigManager.getInstance(mContext)!!.userPackageList
         if (localAppList != null && localAppList.size > 0) {
             for (i in localAppList.indices) {
-                val applicationInfo = getLocalAppInfo(localAppList[i])
+                val applicationInfo = getLocalAppInfo(localAppList[i]!!)
                 if (applicationInfo == null) {
-                    RobotSubConfigManager.getInstance(mContext).removeUserPackage(localAppList[i])
+                    RobotSubConfigManager.getInstance(mContext)!!.removeUserPackage(localAppList[i]!!)
                 }
-                if (isInThePackageList(localAppList[i])) {
-                    RobotSubConfigManager.getInstance(mContext).removeUserPackage(localAppList[i])
+                if (isInThePackageList(localAppList[i]!!)) {
+                    RobotSubConfigManager.getInstance(mContext)!!.removeUserPackage(localAppList[i]!!)
                 }
             }
 
-            RobotSubConfigManager.getInstance(mContext).commit()
+            RobotSubConfigManager.getInstance(mContext)!!.commit()
         }
     }
 

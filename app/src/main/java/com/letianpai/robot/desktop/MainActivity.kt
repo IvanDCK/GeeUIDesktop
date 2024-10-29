@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
          * 首页切换到桌面页，需要主动请求LOGO
          */
         get() {
-            GeeUINetResponseManager.getInstance(this).logoInfo
+            GeeUINetResponseManager.getInstance(this)!!.logoInfo
         }
 
     override fun onDestroy() {

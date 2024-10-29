@@ -29,7 +29,7 @@ class AppListActivity : AppCompatActivity() {
             View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or View.SYSTEM_UI_FLAG_FULLSCREEN
         decorView.systemUiVisibility = uiOptions
         userAppListSize =
-            RobotSubConfigManager.getInstance(this@AppListActivity).userPackageListSize
+            RobotSubConfigManager.getInstance(this@AppListActivity)!!.userPackageListSize
         prePackageName = intent.getStringExtra("package")
         robotMode = intent.getIntExtra("mode", 0)
         LifecycleChangedCallback.instance

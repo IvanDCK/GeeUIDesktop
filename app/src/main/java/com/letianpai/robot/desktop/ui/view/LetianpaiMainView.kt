@@ -60,21 +60,25 @@ class LetianpaiMainView : LinearLayout {
     val imageUrl: Unit
         get() {
             Log.d("ZG", "getImageUrl")
-            GeeUINetResponseManager.getInstance(mContext).logoInfo
+            GeeUINetResponseManager.getInstance(mContext!!)!!.logoInfo
 
-            DeviceChannelLogoCallBack.getInstance()
-                .setDeviceChannelLogoUpdateListener { logoInfo -> updateViewData(logoInfo) }
+            val listener = object : DeviceChannelLogoCallBack.DeviceChannelLogoUpdateListener {
+                override fun onLogoInfoUpdate(logoInfo: LogoInfo?) {
+                    updateViewData(logoInfo)
+                }
+            }
+            DeviceChannelLogoCallBack.instance.setDeviceChannelLogoUpdateListener(listener)
         }
 
     /***
-     * 更新 背景
+     * Update Background
      * @param logoInfo
      */
     private fun updateViewData(logoInfo: LogoInfo?) {
         Thread {
-            if (logoInfo != null && logoInfo.data != null && (!TextUtils.isEmpty(logoInfo.data.desktop_logo))) {
-                updateBackground(logoInfo.data.desktop_logo)
-                downImage(logoInfo.data.desktop_logo)
+            if (logoInfo?.data != null && (!TextUtils.isEmpty(logoInfo.data!!.desktop_logo))) {
+                updateBackground(logoInfo.data!!.desktop_logo)
+                downImage(logoInfo.data!!.desktop_logo!!)
             }
         }.start()
     }
@@ -82,11 +86,11 @@ class LetianpaiMainView : LinearLayout {
     private fun downImage(imageUrl: String) {
         val file = File(sDCardDataPath, "image.jpg")
         try {
-            // 尝试删除已存在的同名文件（如果存在）
+            // Attempt to delete an existing file with the same name (if it exists)
             if (file.exists()) {
                 file.delete()
             }
-            // 创建新文件
+            // Creating a new file
             val created = file.createNewFile()
             if (created) {
                 val destinationPath = file.path
@@ -98,13 +102,13 @@ class LetianpaiMainView : LinearLayout {
     }
 
     /***
-     * 加载上次加载的图片
+     * Load last loaded image
      * @return
      */
     private fun loadPreDownImage() {
         val file = File(sDCardDataPath, "image.jpg")
         if (file.exists()) {
-            // 图片文件存在，加载图片
+            // Image file exists, load image
             val myBitmap = BitmapFactory.decodeFile(file.absolutePath)
             bg_image!!.setImageBitmap(myBitmap)
 

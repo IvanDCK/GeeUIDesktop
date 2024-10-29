@@ -19,8 +19,8 @@ class PackageUninstallReceiver : BroadcastReceiver() {
         )
         AppStatusUpdateCallback.instance
             .uninstallApk(packageName, AppStoreConsts.APP_STORE_STATUS_UNINSTALL)
-        RobotSubConfigManager.getInstance(context).removeUserPackage(packageName)
-        RobotSubConfigManager.getInstance(context).commit()
+        RobotSubConfigManager.getInstance(context)!!.removeUserPackage(packageName)
+        RobotSubConfigManager.getInstance(context)!!.commit()
         RobotAppListManager.getInstance(context).updateAppMenuList()
         //        Log.e("letianpai_appstore","2_PackageUninstallReceiver_packageName: "+ packageName);
 //            if (PACKAGE_NAME.equals(packageName)) {
